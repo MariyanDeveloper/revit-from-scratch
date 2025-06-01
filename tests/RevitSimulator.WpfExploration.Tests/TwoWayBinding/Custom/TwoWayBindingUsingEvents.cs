@@ -40,10 +40,6 @@ public class DummyTextControl
         get => _text;
         set
         {
-            if (_text == value)
-            {
-                return;
-            }
             _text = value;
             TextChanged?.Invoke(this, EventArgs.Empty);
         }
@@ -77,6 +73,12 @@ public class DummyTextControl
                     return;
                 }
                 var newValue = viewModelProperty.GetValue(binding.Source);
+
+                if (controlProperty.GetValue(this) == newValue)
+                {
+                    return;
+                }
+
                 controlProperty.SetValue(this, newValue);
             };
         }
@@ -91,6 +93,10 @@ public class DummyTextControl
         var bindViewModelHandler = (object? sender, EventArgs? args) =>
         {
             var newControlValue = controlProperty.GetValue(this);
+            if (viewModelProperty.GetValue(binding.Source) == newControlValue)
+            {
+                return;
+            }
             viewModelProperty.SetValue(binding.Source, newControlValue);
         };
 
@@ -169,7 +175,7 @@ public class TwoWayBindingUsingEvents
     }
 
     [Fact]
-    public void ShouldTwoWayBinding()
+    public void ShouldSupportFullTwoWayBindingTwoWayBinding()
     {
         var dummyViewModel = new DummyViewModel() { FistName = "Bob" };
 
