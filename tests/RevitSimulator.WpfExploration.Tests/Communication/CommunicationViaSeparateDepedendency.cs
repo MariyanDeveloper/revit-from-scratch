@@ -9,7 +9,6 @@ public class Events
     public void Subscribe<TArgs>(string name, Action<TArgs> action)
     {
         Action<object> castedAction = (obj) => action((TArgs)obj);
-        // var castedAction = action as Action<object>;
         if (_eventsMap.TryGetValue(name, out var actions))
         {
             actions.Add(castedAction);
