@@ -1,6 +1,6 @@
 ﻿using Shouldly;
 
-namespace RevitSimulator.WpfExploration.Tests.TwoWayBinding.Custom;
+namespace RevitSimulator.WpfExploration.Tests.Communication;
 
 public class Events
 {
@@ -71,7 +71,7 @@ public class ComponentB
     }
 }
 
-public class UsingSomeCommunication
+public class CommunicationViaSeparateDepedendency
 {
     [Fact]
     public void ShouldShowCommunicationViaSeparateDependency()
