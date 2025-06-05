@@ -56,7 +56,7 @@ public class Callbacks
             {
                 completedCount++;
                 var currentProgress = Progress.FromCompletionRatio(
-                    action: $"Processing room {completedCount}: Area {room.Area} → {computedArea:F2} (factor: {factor})",
+                    action: $"Processed room {completedCount}: Area {room.Area} → {computedArea:F2} (factor: {factor})",
                     totalCount,
                     completedCount
                 );
@@ -71,11 +71,11 @@ public class Callbacks
                 "percentageDone": 0.0
               },
               {
-                "action": "Processing room 1: Area 10 → 12.00 (factor: 1.2)",
+                "action": "Processed room 1: Area 10 → 12.00 (factor: 1.2)",
                 "percentageDone": 50.0
               },
               {
-                "action": "Processing room 2: Area 15 → 18.00 (factor: 1.2)",
+                "action": "Processed room 2: Area 15 → 18.00 (factor: 1.2)",
                 "percentageDone": 100.0
               }
             ]
