@@ -22,9 +22,7 @@ public interface IContent
     event OnViewActivated OnActivated;
     IReadOnlyList<object> Views { get; }
     object ActiveView { get; }
-
     void Activate(object view);
-
     void Add(object view);
 }
 
