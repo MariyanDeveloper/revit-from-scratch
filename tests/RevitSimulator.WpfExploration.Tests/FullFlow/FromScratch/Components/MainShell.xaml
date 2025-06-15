@@ -1,0 +1,22 @@
+﻿<Window x:Class="RevitSimulator.WpfExploration.Tests.FullFlow.FromScratch.Components.MainShell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:RevitSimulator.WpfExploration.Tests.FullFlow.FromScratch.Components"
+        xmlns:custom="clr-namespace:RevitSimulator.WpfExploration.Tests.FullFlow.FromScratch"
+        xmlns:lib="clr-namespace:RevitSimulator.WpfExploration.Tests.FullFlow"
+        xmlns:core="clr-namespace:RevitSimulator.WpfExploration.Tests.FullFlow.FromScratch.Core"
+        mc:Ignorable="d"
+        Title="MainShell" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <Button x:Name="ComponentAButton" Command="{Binding ComponentACommand}" Content="Component A"/>
+                <Button x:Name="ComponentBButton" Content="Component B" Command="{Binding ComponentBCommand}"/>
+            </StackPanel>
+            <ContentControl x:Name="ContentRegion" core:ContentManager.RegionName="SomeContent"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
