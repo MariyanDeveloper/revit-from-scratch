@@ -3,7 +3,7 @@ using Autofac;
 
 namespace RevitSimulator.WpfExploration.Tests.FullFlow.FromScratch.Core;
 
-public class ContentManager() : IContentManager
+public class ContentManager : IContentManager
 {
     private static readonly Dictionary<string, IContent> Contents = new();
 
@@ -16,20 +16,19 @@ public class ContentManager() : IContentManager
         );
 
     private static void OnRegionNameChanged(
-        DependencyObject d,
+        DependencyObject dependencyObject,
         DependencyPropertyChangedEventArgs e
     )
     {
         var content = new Content();
-        var adapterType = typeof(IContentAdapter<>).MakeGenericType(d.GetType());
+        var adapterType = typeof(IContentAdapter<>).MakeGenericType(dependencyObject.GetType());
 
         var adapter = ContainerContext.Container.ResolveOptional(adapterType);
 
-        if (adapter != null)
+        if (adapter is not null)
         {
-            // Call Adapt(content, d) using reflection
-            var adaptMethod = adapterType.GetMethod("Adapt");
-            adaptMethod?.Invoke(adapter, [content, d]);
+            var adaptMethod = adapterType.GetMethod(nameof(IContentAdapter<object>.Adapt));
+            adaptMethod?.Invoke(adapter, [content, dependencyObject]);
         }
 
         var regionName = e.NewValue.UnsafeCast<string>();
