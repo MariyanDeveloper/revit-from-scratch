@@ -4,6 +4,9 @@ using RevitSimulator.WpfExploration.Tests.FullFlow.FromScratch.Components;
 using RevitSimulator.WpfExploration.Tests.FullFlow.FromScratch.Core;
 using RevitSimulator.WpfExploration.Tests.RevitImpl.Views;
 using static RevitSimulator.WpfExploration.Tests.TestHelpers;
+using ComponentA = RevitSimulator.WpfExploration.Tests.FullFlow.FullFramework.Example.Components.ComponentA;
+using ComponentB = RevitSimulator.WpfExploration.Tests.FullFlow.FullFramework.Example.Components.ComponentB;
+using MainShell = RevitSimulator.WpfExploration.Tests.FullFlow.FullFramework.Example.Components.MainShell;
 
 namespace RevitSimulator.WpfExploration.Tests.FullFlow.FromScratch;
 

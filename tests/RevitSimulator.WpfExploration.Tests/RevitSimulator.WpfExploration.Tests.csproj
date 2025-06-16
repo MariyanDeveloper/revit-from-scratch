@@ -38,6 +38,30 @@
     <Page Update="Navigation\FromScratch\Components\ComponentB.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Update="Navigation\Second\Components\ComponentA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <XamlRuntime>Wpf</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Navigation\Second\Components\ComponentB.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <XamlRuntime>Wpf</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Navigation\Second\Components\MainShell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <XamlRuntime>Wpf</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FullFlow\Second\Example\Components\ComponentA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="FullFlow\Second\Example\Components\ComponentB.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="FullFlow\Second\Example\Components\MainShell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
 </Project>
