@@ -1,6 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 
-namespace RevitSimulator.WpfExploration.Tests.Scripts.Core;
+namespace RevitSimulator.WpfExploration.Tests.ScriptModule.Core;
 
 public class ScriptOptionsBuilder
 {

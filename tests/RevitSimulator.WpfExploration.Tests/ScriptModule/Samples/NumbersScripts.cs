@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using RevitSimulator.WpfExploration.Tests.Scripts.Core;
+﻿using RevitSimulator.WpfExploration.Tests.ScriptModule.Core;
 
-namespace RevitSimulator.WpfExploration.Tests.Scripts.Samples;
+namespace RevitSimulator.WpfExploration.Tests.ScriptModule.Samples;
 
 public class NumbersScripts
 {

@@ -1,7 +1,7 @@
 ﻿using Elements.Geometry;
-using RevitSimulator.WpfExploration.Tests.Scripts.Core;
+using RevitSimulator.WpfExploration.Tests.ScriptModule.Core;
 
-namespace RevitSimulator.WpfExploration.Tests.Scripts.Samples;
+namespace RevitSimulator.WpfExploration.Tests.ScriptModule.Samples;
 
 public static class GeometricScripts
 {

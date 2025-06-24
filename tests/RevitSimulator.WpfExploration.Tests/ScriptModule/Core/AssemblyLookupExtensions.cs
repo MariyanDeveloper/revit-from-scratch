@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace RevitSimulator.WpfExploration.Tests.Scripts.Core;
+namespace RevitSimulator.WpfExploration.Tests.ScriptModule.Core;
 
 public static class AssemblyLookupExtensions
 {

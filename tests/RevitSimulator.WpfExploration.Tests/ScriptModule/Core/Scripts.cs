@@ -3,7 +3,7 @@ using System.Reflection;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
-namespace RevitSimulator.WpfExploration.Tests.Scripts.Core;
+namespace RevitSimulator.WpfExploration.Tests.ScriptModule.Core;
 
 public static class Scripts
 {

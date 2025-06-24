@@ -1,9 +1,9 @@
 ﻿using System.IO;
 using Elements.Geometry;
-using RevitSimulator.WpfExploration.Tests.Scripts.Core;
+using RevitSimulator.WpfExploration.Tests.ScriptModule.Core;
 using Shouldly;
 
-namespace RevitSimulator.WpfExploration.Tests.Scripts;
+namespace RevitSimulator.WpfExploration.Tests.ScriptModule;
 
 delegate double CalculateSum(IEnumerable<double> numbers);
 
@@ -21,8 +21,7 @@ public class ScriptFromFileTests
     {
         var scriptPath = SampleScriptByName("NumbersScripts.cs");
 
-        var createScript = () =>
-            Core.Scripts.FromFile<DummyClass>(Files.FromCSharpFile(scriptPath));
+        var createScript = () => Scripts.FromFile<DummyClass>(Files.FromCSharpFile(scriptPath));
 
         createScript.ShouldThrow<ArgumentException>();
     }
@@ -32,7 +31,7 @@ public class ScriptFromFileTests
     {
         var scriptPath = SampleScriptByName("NumbersScripts.cs");
 
-        var scriptFile = Core.Scripts.FromFile<CalculateSum>(Files.FromCSharpFile(scriptPath));
+        var scriptFile = Scripts.FromFile<CalculateSum>(Files.FromCSharpFile(scriptPath));
 
         scriptFile.Scripts.Count.ShouldBe(2);
     }
@@ -49,7 +48,7 @@ public class ScriptFromFileTests
                 .Build()
         );
 
-        var scriptFile = Core.Scripts.FromFile<LineComputationFunction>(
+        var scriptFile = Scripts.FromFile<LineComputationFunction>(
             Files.FromCSharpFile(scriptPath),
             options
         );

@@ -1,8 +1,7 @@
 ﻿using HelixToolkit.Wpf;
-using Microsoft.CodeAnalysis;
-using RevitSimulator.WpfExploration.Tests.Scripts.Core;
+using RevitSimulator.WpfExploration.Tests.ScriptModule.Core;
 
-namespace RevitSimulator.WpfExploration.Tests.Scripts;
+namespace RevitSimulator.WpfExploration.Tests.ScriptModule;
 
 public static class MetadataBuilderExtensions
 {
